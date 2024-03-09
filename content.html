@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Search</title>
+  <link rel="stylesheet" href="content.css">
+</head>
+<body>
+  <div class="search-container">
+    <select id="filter">
+      <option value="author">Author Name</option>
+      <option value="genre">Genre</option>
+      <option value="book">Book Name</option>
+      <option value="date">Date of Published</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="searchBooks()">Search</button>
+  </div>
+  <div class="table-container">
+    <table id="bookTable">
+      <thead>
+        <tr>
+          <th>Author Name</th>
+          <th>Book Name</th>
+          <th>Genre</th>
+          <th>Date of Published</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows with examples -->
+        <tr>
+          <td>Anitha</td>
+          <td>The Great Adventure</td>
+          <td>Action</td>
+          <td>2022-01-15</td>
+        </tr>
+        <tr>
+          <td>John Doe</td>
+          <td>The Mystery Island</td>
+          <td>Mystery</td>
+          <td>2021-12-20</td>
+        </tr>
+        <tr>
+          <td>Mary Smith</td>
+          <td>The Secret Garden</td>
+          <td>Fantasy</td>
+          <td>2022-02-05</td>
+        </tr>
+        <tr>
+          <td>David Brown</td>
+          <td>The Lost City</td>
+          <td>Adventure</td>
+          <td>2021-11-30</td>
+        </tr>
+        <tr>
+          <td>Emily White</td>
+          <td>The Haunted House</td>
+          <td>Horror</td>
+          <td>2022-03-10</td>
+        </tr>
+        <tr>
+          <td>Michael Johnson</td>
+          <td>The Time Machine</td>
+          <td>Science Fiction</td>
+          <td>2022-02-20</td>
+        </tr>
+        <tr>
+          <td>Lisa Green</td>
+          <td>The Art of Cooking</td>
+          <td>Cookbook</td>
+          <td>2022-04-05</td>
+        </tr>
+        <tr>
+          <td>Robert Lee</td>
+          <td>The History of Art</td>
+          <td>Art</td>
+          <td>2022-03-25</td>
+        </tr>
+        <!-- End of table rows with examples -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="content.js"></script>
+</body>
+</html>

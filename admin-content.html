@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Content</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .add-book-form {
+      display: flex;
+    }
+
+    .add-book-form input {
+      flex: 1;
+      padding: 10px;
+      margin-right: 10px;
+    }
+
+    .add-book-form button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-book-form button:hover {
+      background-color: #45a049;
+    }
+    body{
+    background-color: #c9c9dd;
+  }
+  </style>
+  
+
+</head>
+<body>
+  <div class="container">
+    <h2>Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Author Name</th>
+          <th>Book Name</th>
+          <th>Genre</th>
+          <th>Date of Published</th>
+          <th>Action</th> <!-- New column for delete action -->
+        </tr>
+      </thead>
+      <tbody id="bookList"> <!-- Added id to tbody for easier selection -->
+        <!-- Sample rows, replace with dynamic data -->
+        <tr>
+          <td>Author 1</td>
+          <td>Book 1</td>
+          <td>Fiction</td>
+          <td>2022-03-01</td>
+          <td><button onclick="deleteBook(this)">Delete</button></td> <!-- Button for delete action -->
+        </tr>
+        <tr>
+          <td>Author 2</td>
+          <td>Book 2</td>
+          <td>Thriller</td>
+          <td>2022-04-15</td>
+          <td><button onclick="deleteBook(this)">Delete</button></td> <!-- Button for delete action -->
+        </tr>
+        <!-- Add more book rows if needed -->
+      </tbody>
+    </table>
+    <div class="add-book-form">
+      <input type="text" id="author" placeholder="Author Name">
+      <input type="text" id="book" placeholder="Book Name">
+      <input type="text" id="genre" placeholder="Genre">
+      <input type="date" id="publishedDate">
+      <button onclick="addBook()">Add Book</button>
+    </div>
+  </div>
+
+  <script>
+    function addBook() {
+      var author = document.getElementById('author').value;
+      var book = document.getElementById('book').value;
+      var genre = document.getElementById('genre').value;
+      var publishedDate = document.getElementById('publishedDate').value;
+
+      // Append new row to table
+      var table = document.getElementById('bookList');
+      var newRow = `<tr>
+        <td>${author}</td>
+        <td>${book}</td>
+        <td>${genre}</td>
+        <td>${publishedDate}</td>
+        <td><button onclick="deleteBook(this)">Delete</button></td> <!-- Button for delete action -->
+      </tr>`;
+      table.insertAdjacentHTML('beforeend', newRow);
+
+      // Clear input fields
+      document.getElementById('author').value = '';
+      document.getElementById('book').value = '';
+      document.getElementById('genre').value = '';
+      document.getElementById('publishedDate').value = '';
+    }
+
+    function deleteBook(button) {
+      var row = button.parentNode.parentNode; // Get the row of the button
+      row.parentNode.removeChild(row); // Remove the row from the table
+    }
+  </script>
+</body>
+</html>

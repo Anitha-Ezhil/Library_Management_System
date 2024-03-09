@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.login-options {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-buttons {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+body{
+  text-align: center; /* Center the text horizontally */
+  padding: 20px 0; /* Add padding for spacing */
+  background-color: #c9c9dd; /* Add background color (you can change #007bff to any color you prefer) */
+  color: #fff; /* Set text color to white for better contrast */
+  margin: 0; /* Remove default margin */
+}
+h1{
+  color: #ca2525;
+}
+
+

@@ -1,0 +1,45 @@
+/* Styles for search container */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0e9e9;
+  margin: 0;
+  padding: 0;
+}
+.search-container {
+  margin-bottom: 20px;
+  text-align: center; /* Center align the contents */
+}
+
+/* Styles for table container */
+.table-container {
+  overflow-x: auto;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   /* Limit the maximum width */
+}
+
+/* Styles for table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left; /* Align text to the left */
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+body {
+  background-color: #c9c9dd;
+}
